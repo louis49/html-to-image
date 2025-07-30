@@ -93,7 +93,7 @@ export async function resourceToDataURL(
       },
     )
     dataURL = makeDataUrl(content, contentType!)
-  } catch (error) {
+  } catch (error: any) {
     dataURL = options.imagePlaceholder || ''
 
     let msg = `Failed to fetch resource: ${resourceUrl}`
